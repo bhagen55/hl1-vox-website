@@ -1,0 +1,3 @@
+[submodule "hl1voxsentenceformer"]
+	path = hl1voxsentenceformer
+	url = git@github.com:bhagen55/hl1voxsentenceformer.git
