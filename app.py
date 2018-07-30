@@ -10,13 +10,13 @@ app.config['SIMPLELOGIN_USERNAME'] = 'chuck'
 app.config['SIMPLELOGIN_PASSWORD'] = 'norris'
 SimpleLogin(app)
 
-@app.route('/')
+@app.route('/vox')
 @login_required
 def my_form():
     return render_template('index.html', phrases = vox.getcachedsentences())
 
 
-@app.route('/', methods=['POST'])
+@app.route('/vox', methods=['POST'])
 @login_required
 def my_form_post():
     text = request.form['text']
@@ -27,3 +27,6 @@ def my_form_post():
 
     return render_template('play.html', mp3_link = sentence_data['path'],
                                         says = sentence_data['sentence'])
+
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0')
