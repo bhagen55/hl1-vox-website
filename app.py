@@ -1,14 +1,23 @@
 from flask import Flask, request, render_template
 from hl1voxsentenceformer import hl1sentenceformer as vox
+from flask_simplelogin import SimpleLogin, login_required
 
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = 'something-secret'
+app.config['SIMPLELOGIN_USERNAME'] = 'chuck'
+app.config['SIMPLELOGIN_PASSWORD'] = 'norris'
+SimpleLogin(app)
+
 @app.route('/')
+@login_required
 def my_form():
     return render_template('index.html', phrases = vox.getcachedsentences())
 
+
 @app.route('/', methods=['POST'])
+@login_required
 def my_form_post():
     text = request.form['text']
     processed_text = text.upper()

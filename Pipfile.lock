@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c082a35822da1d6119798baa3803c35181057715beaea1a987f6974047efc436"
+            "sha256": "f0e5d6103121d2c49518453d9403daea5bcf9fc7ec90c3bbd251460085304ac0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,6 +30,21 @@
             ],
             "index": "pypi",
             "version": "==1.0.2"
+        },
+        "flask-simplelogin": {
+            "hashes": [
+                "sha256:0be2687456d4717bc44d0506e20c0f5eb4f06edd1a31fca379ff4d235199e374",
+                "sha256:fa58c5c92746c0c29982bddfe0736fdb3f2256373f555e8529e36f610c815a05"
+            ],
+            "index": "pypi",
+            "version": "==0.0.6"
+        },
+        "flask-wtf": {
+            "hashes": [
+                "sha256:5d14d55cfd35f613d99ee7cba0fc3fbbe63ba02f544d349158c14ca15561cc36",
+                "sha256:d9a9e366b32dcbb98ef17228e76be15702cd2600675668bca23f63a7947fd5ac"
+            ],
+            "version": "==0.14.2"
         },
         "itsdangerous": {
             "hashes": [
@@ -78,6 +93,13 @@
                 "sha256:d5da73735293558eb1651ee2fddc4d0dedcfa06538b8813a2e20011583c9e49b"
             ],
             "version": "==0.14.1"
+        },
+        "wtforms": {
+            "hashes": [
+                "sha256:0cdbac3e7f6878086c334aa25dc5a33869a3954e9d1e015130d65a69309b3b61",
+                "sha256:e3ee092c827582c50877cdbd49e9ce6d2c5c1f6561f849b3b068c1b8029626f1"
+            ],
+            "version": "==2.2.1"
         }
     },
     "develop": {}
