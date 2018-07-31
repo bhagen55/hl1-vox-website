@@ -11,13 +11,13 @@ app.config['SIMPLELOGIN_PASSWORD'] = 'norris'
 SimpleLogin(app)
 
 @app.route('/vox')
-@login_required
+#@login_required
 def my_form():
     return render_template('index.html', phrases = vox.getcachedsentences())
 
 
 @app.route('/vox', methods=['POST'])
-@login_required
+#@login_required
 def my_form_post():
     text = request.form['text']
     processed_text = text.upper()
